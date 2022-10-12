@@ -32,7 +32,7 @@ const NewArticle = () => {
           const docSnap = await getDoc(docRef);
           if(docSnap.exists()){
             const currentArticle = docSnap.data() as ISavedArticle;
-            if(currentArticle.uid !== user?.uid || !user.admin){
+            if(currentArticle.uid !== user?.uid || (currentArticle.uid !== user?.uid && !user.admin)){
               navigate('/');
             }
             setValue('title', currentArticle.title);
