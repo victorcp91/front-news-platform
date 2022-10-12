@@ -21,7 +21,10 @@ export const Articles = styled.div`
   width: 100%;
   display: grid;
   gap: 20px;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+  @media(min-width: 600px){
+    grid-template-columns: 50% 50%;
+  }
 `;
 
 export const NoBookmarks = styled.div`
