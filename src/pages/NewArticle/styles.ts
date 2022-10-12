@@ -32,6 +32,7 @@ export const Form = styled.form`
   }
   img{
     display: block;
+    width: 100%;
   }
   label, input,textarea, select{
     display: block;
